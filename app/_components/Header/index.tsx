@@ -1,10 +1,11 @@
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./index.module.css"
 
 export const Header: React.FC = () => {
     return (
         <header className={styles.header}>
-            <a href="/" className={styles.logoLink}>
+            <Link href="/" className={styles.logoLink}>
                 <Image
                     src="/logo.svg"
                     alt="SIMPLE"
@@ -13,7 +14,20 @@ export const Header: React.FC = () => {
                     height={133}
                     priority
                 />
-            </a>
+            </Link>
+            <nav className={styles.nav}>
+                <ul className={styles.items}>
+                    <li>
+                        <Link href="/news">ニュース</Link>
+                    </li>
+                    <li>
+                        <Link href="/members">メンバー</Link>
+                    </li>
+                    <li>
+                        <Link href="/members">お問い合わせ</Link>
+                    </li>
+                </ul>
+            </nav>
         </header>
     )
 }

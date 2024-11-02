@@ -38,8 +38,7 @@ const data: { contents: News[] } = {
 };
 
 
-
-export default function Home() {
+const Home: React.FC = () => {
     const sliceData = data.contents.slice(0, 2)
     return (
         <>
@@ -68,3 +67,5 @@ export default function Home() {
         </>
     );
 }
+
+export default Home
