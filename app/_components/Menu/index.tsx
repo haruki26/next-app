@@ -23,7 +23,7 @@ export const Menu: React.FC = () => {
                         <Link href="/members">メンバー</Link>
                     </li>
                     <li>
-                        <Link href="/members">お問い合わせ</Link>
+                        <Link href="/contact">お問い合わせ</Link>
                     </li>
                 </ul>
                 <button className={cs(styles.button, styles.close)} onClick={close}>
