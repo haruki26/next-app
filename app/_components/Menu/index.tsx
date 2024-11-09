@@ -28,7 +28,7 @@ export const Menu: React.FC = () => {
                 </ul>
                 <button className={cs(styles.button, styles.close)} onClick={close}>
                     <Image
-                        src="/close/svg"
+                        src="/close.svg"
                         alt="閉じる"
                         width={24}
                         height={24}
