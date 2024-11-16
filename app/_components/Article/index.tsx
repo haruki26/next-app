@@ -4,6 +4,7 @@ import type { News } from "@/app/_libs/microcms";
 import styles from "./index.module.css";
 import { CategoryLabel } from "../Category";
 import { DateLabel } from "../Date";
+import Link from "next/link";
 
 type Props = {
     data: News;
@@ -15,7 +16,12 @@ export const Article: React.FC<Props> = ({ data }) => {
             <h1 className={styles.title}>{data.title}</h1>
             <p className={styles.description}>{data.description}</p>
             <div className={styles.meta}>
-                <CategoryLabel category={data.category} />
+                <Link
+                    href={`/news/category/${data.category.id}`}
+                    className={styles.categoryLink}
+                >
+                    <CategoryLabel category={data.category} />
+                </Link>
                 <DateLabel date={data.publishedAt ?? data.createdAt} />
             </div>
             {data.thumbnail && (

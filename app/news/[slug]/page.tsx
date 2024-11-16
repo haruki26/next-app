@@ -9,10 +9,18 @@ type Props = {
     params: {
         slug: string;
     };
+    searchParams: {
+        dk?: string;
+    };
 };
 
-const Page: React.FC<Props> = async ({ params }) => {
-    const data = await getNewsDetail(params.slug).catch(notFound);
+const Page: React.FC<Props> = async ({ params, searchParams }) => {
+    const data = await getNewsDetail(
+        params.slug,
+        {
+            draftKey: searchParams.dk,
+        },
+    ).catch(notFound);
 
     return (
         <>
