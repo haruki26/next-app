@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./index.module.css"
+import { formatDate } from "@/app/_libs/utils";
 
 type Props =  {
     date: string;    
@@ -15,7 +16,7 @@ export const DateLabel: React.FC<Props> = ({ date }) => {
                 height={16}
                 loading="eager"
             />
-            {date}
+            {formatDate(date)}
         </span>
     );
-}
+};
