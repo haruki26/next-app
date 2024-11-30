@@ -2,7 +2,6 @@ import { NewsList } from "@/app/_components/NewsList";
 import { SearchField } from "@/app/_components/SearchField";
 import { NEWS_LIST_LIMIT } from "@/app/_constans";
 import { getNewsList } from "@/app/_libs/microcms";
-import { useSearchParams } from "next/navigation";
 
 type Props = {
     searchParams: {
