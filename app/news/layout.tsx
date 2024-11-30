@@ -5,6 +5,8 @@ type Props = {
     children: React.ReactNode;
 };
 
+export const revalidate = 60;
+
 const NewsLayout: React.FC<Props> = ({ children }) => {
     return (
         <>

@@ -4,8 +4,6 @@ import { NEWS_LIST_LIMIT } from "../_constans";
 import { Pagination } from "../_components/Pagination";
 import { SearchField } from "../_components/SearchField";
 
-export const revalidate = 60;
-
 const Page: React.FC = async () => {
     const { contents: news, totalCount } = await getNewsList({
         limit: NEWS_LIST_LIMIT,
