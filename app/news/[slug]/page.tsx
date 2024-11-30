@@ -14,6 +14,8 @@ type Props = {
     };
 };
 
+export const revalidate = 0;
+
 const Page: React.FC<Props> = async ({ params, searchParams }) => {
     const data = await getNewsDetail(
         params.slug,
